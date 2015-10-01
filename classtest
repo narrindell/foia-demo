@@ -1,0 +1,45 @@
+Q(1): Are you looking for information for yourself or someone else?
+a: Self
+	Q(1.1): Are you a U.S. Citizen?
+	a: Yes
+		Q(1.1.1): Are you concerned about what the Government knows about you? 
+		a: Yes
+			Q(1.1.1.1): Do you know your Social Security Number?
+			a: Yes
+				Q(1.1.1.1.1): Great. Here are the necessary steps you will now need to complete in order to make a Freedom of Information Act Request. ["https://umail.suffolk.edu/owa/redir.aspx?C=lNg2dUjMJku_PWCzWvU8Lxxy4oh0NIIn_EVOUdX4k5_HQKNvw2NUs07tG5oF6UUBKX7TTydPFI.&URL=https%3a%2f%2fwww.fbi.gov%2ffoia%2frequesting-fbi-records"] Go Here
+			a: No
+				Q(1.1.1.1.2): In order to proceed, you will need the following additional information: Name, Alias, Date of Birth and Former Addresses. Do you have this available?
+				a: Yes
+					Q(1.1.1.1.2.1): Have you been convicted of a felony and/or misdemeanor?
+					a: Yes
+					a: No
+				a: No
+					Q(1.1.1.1.2.2): In order to proceed, you would need to have this information available. Please try again. 
+		a: No
+			Q(1.1.1.2):GOTO:1.1.2.3
+	a: No
+		Q(1.1.2): Are you a lawfully admitted Alien?
+		a: Yes
+		a: No
+			Q(1.1.2.2): Sorry, you are unable to obtain information on an individual who is not a U.S. Citizen or a lawfully admitted Alien. 
+		a: No
+			Q(1.1.2.3): Are you interested in getting general information on the FBI?
+			a: Yes
+				Q(1.1.2.3.1): Great. Here is a link to allow you to receive additional information about the FBI and the FOIA. ["http://www.foia.gov"] Go Here
+			a: No
+				Q(1.1.2.3.2): Thank you for your information. Since you are not interested in obtaining information about the FBI, these forms would not be beneficial to you. 
+		a: No
+			Q(1.1.2.4): Sorry we were unable to help you. Please try again. 
+a: Someone else
+	Q(1.2): Is this person deceased?
+	a: Yes
+		Q(1.2.1): Is this person a U.S. Citizen?
+		a: Yes
+			Q(1.2.1.1): If your request is for information concerning a deceased individual, you must provide proof of death. Acceptable forms of proof of death include: obituaries, death certificates, recognized sources that can be documented, written media, Who’s Who in America, an FBI file that indicates a person is deceased, date of birth is 100 years or greater, or Social Security Death Index page.
+		a: No
+			Q(1.2.1.2): Is this person a lawfully admitted Alien?
+			a: Yes
+			a: No
+				Q(1.2.1.2.2):GOTO:1.1.1.1.2
+	a: No
+		Q(1.2.2): Sorry, you are unable to obtain information on another individual who is still alive. 
